@@ -92,7 +92,7 @@ class Language extends Widget
             $linkContent,
             Url::current(array_merge(Yii::$app->request->get(), ['language' => $language]))
         );
-        return Html::tag('li', $link);
+        return $link;
     }
 
     protected function renderDropdownListItems($items)
