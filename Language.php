@@ -15,7 +15,7 @@ use xtomdex\countryflags\CountryFlag;
  *
  * Excepts current application language from the list.
  *
- * @author Dmitrii Sharonov <sharonovde2@gmail.com>
+ * @author Dmitrii Sharonov <sharonovde@gmail.com>
  */
 class Language extends Widget
 {
@@ -45,7 +45,7 @@ class Language extends Widget
     public function init()
     {
         foreach ($this->items as $language => $item){
-            $this->items[$language]['imgUrl'] = CountryFlag::get($item['countryCode'], 64);
+            $this->items[$language]['imgUrl'] = CountryFlag::get($item['countryCode']);
         }
 
         $this->language = Yii::$app->language;
@@ -70,7 +70,6 @@ class Language extends Widget
     {
         $linkContent = Html::img($item['imgUrl'], [
             'style' => 'display: inline-block; margin-right: 5px;',
-            'height' => '10',
             'alt' => $item['name']
         ]);
         $linkContent .= ' ' . $item['name'];
@@ -86,7 +85,6 @@ class Language extends Widget
     {
         $linkContent = Html::img($item['imgUrl'], [
             'style' => 'display: inline-block; margin-right: 5px;',
-            'height' => '10',
             'alt' => $item['name']
         ]) . ' ' . $item['name'];
         $link = Html::a(
