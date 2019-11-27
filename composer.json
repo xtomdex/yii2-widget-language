@@ -1,0 +1,24 @@
+{
+    "name": "xtomdex/yii2-widget-language",
+    "description": "Rendering dropdown list with languages to switch",
+    "type": "yii2-extension",
+    "keywords": ["yii2","widget","language","i18n"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dmitrii Sharonov",
+            "email": "sharonovde@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": ">=2.0.0",
+        "xtomdex/country-flags": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xtomdex\\widgets\\": ""
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
