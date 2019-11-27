@@ -45,7 +45,7 @@ class Language extends Widget
     public function init()
     {
         foreach ($this->items as $language => $item){
-            $this->items[$language]['imgUrl'] = CountryFlag::get($item['countryCode']);
+            $this->items[$language]['imgUrl'] = CountryFlag::get($item['countryCode'], 64);
         }
 
         $this->language = Yii::$app->language;
