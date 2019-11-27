@@ -73,6 +73,7 @@ class Language extends Widget
             'height' => '10',
             'alt' => $item['name']
         ]);
+        $linkContent .= ' ' . $item['name'];
         $linkContent .= "\n" . Html::tag('span', '', ['class' => 'caret']);
 
         return Html::a($linkContent, '#', [
