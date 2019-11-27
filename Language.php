@@ -104,6 +104,10 @@ class Language extends Widget
             $array[] = $this->renderDropdownListItem($language, $item);
         }
 
-        return Html::ul($array, ['class' => 'dropdown-menu', 'role' => 'menu']);
+        return Html::ul($array, [
+            'class' => 'dropdown-menu',
+            'role' => 'menu',
+            'encode' => false
+        ]);
     }
 }
